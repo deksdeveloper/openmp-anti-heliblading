@@ -21,6 +21,7 @@ public OnPlayerTakeDamage(playerid, issuerid, Float:amount, WEAPON:weaponid, bod
                   SetTimerEx("Unfreeze", 350, false, "i", issuerid);
                   GameTextForPlayer(issuerid, "~r~Don't do Heli Blading!", 2000, 6);
                   TogglePlayerControllable(playerid, true);
+                  amount = 0.0;
               }
           }
   	}
