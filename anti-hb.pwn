@@ -1,10 +1,27 @@
+#define FILTERSCRIPT
+
 #include <open.mp>
 
-public OnGameModeInit()
+#if defined FILTERSCRIPT
+
+public OnFilterScriptInit()
 {
-    print("Anti heliblading started");
-    return 1;
+	print("\n--------------------------------------");
+	print("Anti heli-blading loaded!");
+	print("--------------------------------------\n");
+	return 1;
 }
+
+public OnFilterScriptExit()
+{
+	return 1;
+}
+
+#else
+
+main(){}
+
+#endif
 
 public OnPlayerTakeDamage(playerid, issuerid, Float:amount, WEAPON:weaponid, bodypart)
 {
