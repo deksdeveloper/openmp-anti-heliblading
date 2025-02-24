@@ -36,7 +36,7 @@ public OnPlayerTakeDamage(playerid, issuerid, Float:amount, WEAPON:weaponid, bod
                   SetVehicleVelocity(GetPlayerVehicleID(issuerid), (vel[0] * -1)/2, (vel[1] * -1)/2, (vel[2] * -1)/2);
                   TogglePlayerControllable(issuerid, false);
                   SetTimerEx("Unfreeze", 350, false, "i", issuerid);
-                  GameTextForPlayer(issuerid, "~r~Don't do Heli Blading!", 2000, 6);
+                  GameTextForPlayer(issuerid, "~r~Don't do Heli Blading!x", 2000, 6);
                   TogglePlayerControllable(playerid, true);
                   amount = 0.0;
               }
